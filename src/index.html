@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agri'Trade</title>
+   <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Agri'Trade</h1>
+  <h4>Public Id : <span class="white"><span id="SenderBalance"></span> </h4>
+  
+    <div class="btn-group  " style="color:#E8BE84 "  id="form-selector"  color=#E8BE84 align="center">
+		
+		<button type="button"  class="btn1 btn-selector active" id="sign-up-btn">Agriculteur</button>
+		<button type="button" class="btn1 btn-selector" id="log-in-btn">Test de qualité</button>
+		<button type="button" class="btn1 btn-selector" id="payments-btn">Client</button>
+		<button type="button" class="btn1 btn-selector" id="finance-btn">Micro-Finance</button>
+		
+	</div>
+	<div class="form" id="sign-up-form">
+		<h2 class="form-title">Entrer les  Details</h2>
+		<input type="text" class="input-std" id="fid" placeholder="Id">
+		<input type="text" class="input-std" id="fname" placeholder="nom">
+		<input type="text" class="input-std" id="loc" placeholder="Localisation">
+		<input type="text" class="input-std" id="crop" placeholder="Aliment">
+		<input type="text" class="input-std" id="contact" placeholder="telephone">
+		<input type="text" class="input-std" id="quantity" placeholder="Quantité">
+		<input type="text" class="input-std" id="exprice" placeholder="prix">
+		<button type="button" class="btn-submit" id="setvalue" onclick="set()">valider les Details!</button>
+	<span id="status"></span>
+	</div>
+	
+	 	
+  <div class="form" id="log-in-form">
+  <h2 class="form-title">Test de qualité</h2>
+		
+		
+  <br>
+  <table>  
+  <!-- <tr><td><b><label class = "black">Id  agriculteur</label></td><td>:</td></b><td><span class="black" span id="getval1"></span></td></tr> -->
+  <input type="text" class="input-std" id="fid1" placeholder="Id agriculteur">
+  <tr><td><b><label class = "black">Nom agriculteur</label></td><td>:</td></b><td><span class="black" span id="getval2"></span></td></tr>
+  <tr><td><b><label class = "black">Localisation</label></td><td>:</td></b><td><span class="black" span id="getval3"></span></td></tr>
+  <tr><td><b><label class = "black">Aliment</label></td><td>:</td></b><td><span class="black" span id="getval4"></span></td></tr>
+  <tr><td><b><label class = "black">telephone</label></td><td>:</td></b><td><span class="black" span id="getval5"></span></td></tr>
+  <tr><td><b><label class = "black">Quantité</label></td><td>:</td></b><td><span class="black" span id="getval6"></span></td></tr>
+  <tr><td><b><label class = "black">Prix prévu </label><td>:</td></td></b><td><span class="black" span id="getval7"></span></td></tr>
+  
+  </table>  
+  <button type="button" class="btn-submit" id="getvalue" onclick="get();">Afficher les valeurs</button>
+     
+  <br><br>
+  
+  <table align="center"> 
+  <tr>
+ 
+  </table> 
+ 
+  <br>
+  
+  <br>
+<button type="button" class="btn-submit" id="Approve-btn" align ="center" font="20px">Approuver  les details</button>
+  
+
+
+  <span id="status"></span>
+
+ </div>
+	
+
+<div class="form" id="approve-form">
+     <h2 class="form-title">Product Details</h2>
+		<input type="text" class="input-std" id="lotno" placeholder="Lot Number">
+		<input type="text" class="input-std" id="grade" placeholder="Grade">
+		<input type="text" class="input-std" id="mrp" placeholder="MRP">
+		<input type="text" class="input-std" id="testdate" placeholder="Test Date">
+		<input type="text" class="input-std" id="expdate" placeholder="Expiry Date">
+		
+		<button type="button" class="btn-submit" id="setvalue" onclick="setQ()">Submit</button>
+			
+		<span id="status"></span>	
+
+  </div>
+  
+  
+  <div class="form" id="payments-form">
+   <h2 class="form-title">Client</h2>
+  <table>  
+  <input type="text" class="input-std" id="getfid" placeholder=" Id de l'agriculteur">
+  <tr><td><b><label class = "black"> Id agriculteur</label></td><td>:</td></b><td><span class="black" span id="cgetval1"></span></td></tr>
+  <tr><td><b><label class = "black">Nom agriculteur</label></td><td>:</td></b><td><span class="black" span id="cgetval2"></span></td></tr>
+  <tr><td><b><label class = "black">Localisation</label></td><td>:</td></b><td><span class="black" span id="cgetval3"></span></td></tr>
+  <tr><td><b><label class = "black">Aliment</label></td><td>:</td></b><td><span class="black" span id="cgetval4"></span></td></tr>
+  <tr><td><b><label class = "black">Telephone</label></td><td>:</td></b><td><span class="black" span id="cgetval5"></span></td></tr>
+  <tr><td><b><label class = "black">Quantité</label></td><td>:</td></b><td><span class="black" span id="cgetval6"></span></td></tr>
+  <tr><td><b><label class = "black">Prix prévu</label><td>:</td></td></b><td><span class="black" span id="cgetval7"></span></td></tr>
+  <input type="text" class="input-std" id="lotnum" placeholder="Nombre de lots">
+  <tr><td><b><label class = "black">Nombre de lots</label><td>:</td></td></b><td><span class="black" span id="cgetval8"></span></td></tr>
+  <tr><td><b><label class = "black">Grade</label><td>:</td></td></b><td><span class="black" span id="cgetval9"></span></td></tr>
+  <tr><td><b><label class = "black">MRP</label><td>:</td></td></b><td><span class="black" span id="cgetval10"></span></td></tr>
+  <tr><td><b><label class = "black">Date de Test </label><td>:</td></td></b><td><span class="black" span id="cgetval11"></span></td></tr>
+  <tr><td><b><label class = "black">Date d'expiration </label><td>:</td></td></b><td><span class="black" span id="cgetval12"></span></td></tr>
+  </table>
+  <button type="button" class="btn-submit" id="getcustval" onclick="getQ();cgetQ();">Get Value</button>
+  </div>
+
+  <div class="form" id="finance-form">
+		<h2 class="form-title">Micro-Finance</h2>
+		
+
+		<input type="text" class="input-std" id="pfid" placeholder="Id de l'agriculteur">
+		<input type="text" class="input-std" id="lotnum" placeholder="Nombre de lots">
+		<input type="text" class="input-std" id="amount" placeholder="financer le montant">
+		<table>
+		<tr><td><b><label class = "black">Balance</label></td><td>:</td></b><td><span class="black"><span class="black" span id="balance"></span>$</span></td></tr>
+		
+		</table>
+		<button type="button" class="btn-submit" id="getfund" onclick="fund()">Financer l'agriculteur</button>
+		
+	<span id="status"></span>
+	</div>
+
+
+  
+   <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+ 
+</body>
+</html>
